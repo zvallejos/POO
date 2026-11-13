@@ -1,0 +1,47 @@
+class Dispositivo {
+    protected String marca;
+    protected String modelo;
+
+    public Dispositivo(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+    }
+}
+
+class Celular extends Dispositivo {
+    private int memoriaRam;
+
+    public Celular(String marca, String modelo, int memoriaRam) {
+        super(marca, modelo);
+        this.memoriaRam = memoriaRam;
+    }
+
+    Override
+    public void mostrarInfo() {
+        System.out.println("Información del Celular");
+        super.mostrarInfo();
+        System.out.println("Memoria RAM: " + memoriaRam + " GB");
+    }
+}
+
+class Televisor extends Dispositivo {
+    private int pulgadas;
+
+    public Televisor(String marca, String modelo, int pulgadas) {
+        super(marca, modelo);
+        this.pulgadas = pulgadas;
+    }
+
+    Override
+    public void mostrarInfo() {
+        System.out.println("Info de tv");
+        super.mostrarInfo();
+        System.out.println("Pulgadas: " + pulgadas);
+    }
+}
+
